@@ -1,5 +1,6 @@
 import NextLink from "next/link";
 import { Link } from "@nextui-org/link";
+import { Button } from "@nextui-org/button";
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code"
 import { button as buttonStyles } from "@nextui-org/theme";
@@ -9,46 +10,29 @@ import { GithubIcon } from "@/components/icons";
 
 export default function Home() {
 	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>Make&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-				<br />
-				<h1 className={title()}>
-					websites regardless of your design experience.
-				</h1>
+		<section className="flex flex-col gap-3 content-center justify-center items-center sm:flex-row sm:mt-20 py-8 md:py-10">
+			<div className="inline-block">
+				<h1 className={title({ fontWeight: 'bold' })}>Plan Smarter, Not Harder with&nbsp;</h1>
+				<h1 className={title({ color: "gradient", size: 'lg', fontWeight: 'bold' })}>PLOKER/next</h1>
 				<h4 className={subtitle({ class: "mt-4" })}>
-					Beautiful, fast and modern React UI library.
+					Take your Agile and Scrum development to the next level with our Planning Poker tool
 				</h4>
+				<div className="flex gap-3 py-5">
+					<Button className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}>
+						Start a game
+					</Button>
+					<Link
+						isExternal
+						as={NextLink}
+						className={buttonStyles({ variant: "bordered", radius: "full" })}
+						href={siteConfig.links.github}
+					>
+						<GithubIcon size={20} />
+						GitHub
+					</Link>
+				</div>
 			</div>
-
-			<div className="flex gap-3">
-				<Link
-					isExternal
-					as={NextLink}
-					href={siteConfig.links.docs}
-					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-				>
-					Documentation
-				</Link>
-				<Link
-					isExternal
-					as={NextLink}
-					className={buttonStyles({ variant: "bordered", radius: "full" })}
-					href={siteConfig.links.github}
-				>
-					<GithubIcon size={20} />
-					GitHub
-				</Link>
-			</div>
-
-			<div className="mt-8">
-				<Snippet hideSymbol hideCopyButton variant="bordered">
-					<span>
-						Get started by editing <Code color="primary">app/page.tsx</Code>
-					</span>
-				</Snippet>
-			</div>
-		</section>
+			<div className="w-full"></div>
+		</section >
 	);
 }
