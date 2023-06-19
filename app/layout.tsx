@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 	},
 	description: siteConfig.description,
 	themeColor: [
-		{ media: "(prefers-color-scheme: light)", color: "white" },
-		{ media: "(prefers-color-scheme: dark)", color: "black" },
+		{ media: "(prefers-color-scheme: light)", color: "#dddddd" },
+		{ media: "(prefers-color-scheme: dark)", color: "#1c1c1c" },
 	],
 	icons: {
 		icon: "/favicon.ico",

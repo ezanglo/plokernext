@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Ploker",
+	name: "PLOKER/next",
 	description: "A planning poker tool.",
 	navItems: [
 		{
